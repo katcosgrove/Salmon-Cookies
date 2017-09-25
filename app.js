@@ -11,7 +11,7 @@ var first = {
   cookiesArray: [],
   totalCookies: 0,
   getAvgCustomersHour: function (){
-    this.avgCustomersHour = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
+    this.avgCustomersHour = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
   },
   getAvgCookiesHour: function () {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
@@ -57,7 +57,7 @@ var seatac = {
   cookiesArray:[],
   totalCookies: 0,
   getAvgCustomersHour: function (){
-    this.avgCustomersHour = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
+    this.avgCustomersHour = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
   },
   getAvgCookiesHour: function () {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
@@ -92,19 +92,53 @@ console.log('Average Customers per Hour ' + seatac.avgCustomersHour);
 console.log('Average Cookies per Hour ' + seatac.avgCookiesHour);
 console.log(seatac.cookiesArray);
 console.log(seatac.totalCookies);
-//
-// var first = {
-//   storeName: 'First and Pike',
-//   minCustomers:
-//   maxCustomers:
-//   avgSale:
-//   avgCustomersHour:
-//   avgCookiesHour:
-//   cookiesArray:
-//   totalCookies:
-//
-// };
-//
+
+var seacenter = {
+  storeName: 'Seattle Center',
+  minCustomers: 11,
+  maxCustomers: 38,
+  avgSale: 3.7,
+  avgCustomersHour: 0,
+  avgCookiesHour: 0,
+  cookiesArray: [],
+  totalCookies: 0,
+  getAvgCustomersHour: function (){
+    this.avgCustomersHour = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
+  },
+  getAvgCookiesHour: function () {
+    this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
+  },
+  render: function () {
+    for (var i = 0; i < days.length; i++) {
+      this.getAvgCustomersHour();
+      this.getAvgCookiesHour();
+      var liEl = document.createElement('li');
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      var seacenterUl = document.getElementById('seacenter');
+      seacenterUl.appendChild(liEl);
+      this.cookiesArray.push(this.avgCookiesHour);
+    }
+  },
+  total: function () {
+    this.totalCookies = this.cookiesArray.reduce(function (a,b) {
+      return a + b;
+    }, 0);
+    var liEl = document.createElement('li');
+    liEl.textContent = 'Total ' + this.totalCookies;
+    var seacenterUl = document.getElementById('seacenter');
+    seacenterUl.appendChild(liEl);
+  }
+};
+
+seacenter.getAvgCustomersHour();
+seacenter.getAvgCookiesHour();
+seacenter.render();
+seacenter.total();
+console.log('Average Customers per Hour ' + seacenter.avgCustomersHour);
+console.log('Average Cookies per Hour ' + seacenter.avgCookiesHour);
+console.log(seacenter.cookiesArray);
+console.log(seacenter.totalCookies);
+
 // var first = {
 //   storeName: 'First and Pike',
 //   minCustomersDay:
