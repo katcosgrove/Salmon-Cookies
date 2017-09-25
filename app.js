@@ -183,14 +183,49 @@ console.log('Average Customers per Hour ' + caphill.avgCustomersHour);
 console.log('Average Cookies per Hour ' + caphill.avgCookiesHour);
 console.log(caphill.cookiesArray);
 console.log(caphill.totalCookies);
-// var first = {
-//   storeName: 'First and Pike',
-//   minCustomers:
-//   maxCustomers:
-//   avgSale:
-//   avgCustomersHour:
-//   avgCookiesHourcookiesHour:
-//   cookiesArray:
-//   cookiesTotal:
-//
-// };
+
+var alki = {
+  storeName: 'Alki Beach',
+  minCustomers: 2,
+  maxCustomers: 16,
+  avgSale: 4.6,
+  avgCustomersHour: 0,
+  avgCookiesHourcookiesHour: 0,
+  cookiesArray: [],
+  cookiesTotal: 0,
+  getAvgCustomersHour: function (){
+    this.avgCustomersHour = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
+  },
+  getAvgCookiesHour: function () {
+    this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
+  },
+  render: function () {
+    for (var i = 0; i < days.length; i++) {
+      this.getAvgCustomersHour();
+      this.getAvgCookiesHour();
+      var liEl = document.createElement('li');
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      var alkiUl = document.getElementById('alki');
+      alkiUl.appendChild(liEl);
+      this.cookiesArray.push(this.avgCookiesHour);
+    }
+  },
+  total: function () {
+    this.totalCookies = this.cookiesArray.reduce(function (a,b) {
+      return a + b;
+    }, 0);
+    var liEl = document.createElement('li');
+    liEl.textContent = 'Total ' + this.totalCookies;
+    var alkiUl = document.getElementById('alki');
+    alkiUl.appendChild(liEl);
+  }
+
+};
+alki.getAvgCustomersHour();
+alki.getAvgCookiesHour();
+alki.render();
+alki.total();
+console.log('Average Customers per Hour ' + alki.avgCustomersHour);
+console.log('Average Cookies per Hour ' + alki.avgCookiesHour);
+console.log(alki.cookiesArray);
+console.log(alki.totalCookies);
