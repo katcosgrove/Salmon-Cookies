@@ -139,26 +139,58 @@ console.log('Average Cookies per Hour ' + seacenter.avgCookiesHour);
 console.log(seacenter.cookiesArray);
 console.log(seacenter.totalCookies);
 
+var caphill = {
+  storeName: 'Capitol Hill',
+  minCustomers: 20,
+  maxCustomers: 38,
+  avgSale: 2.3,
+  avgCustomersHour: 0,
+  avgCookiesHour: 0,
+  cookiesArray: [],
+  cookiesTotal: 0,
+  getAvgCustomersHour: function (){
+    this.avgCustomersHour = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
+  },
+  getAvgCookiesHour: function () {
+    this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
+  },
+  render: function () {
+    for (var i = 0; i < days.length; i++) {
+      this.getAvgCustomersHour();
+      this.getAvgCookiesHour();
+      var liEl = document.createElement('li');
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      var caphillUl = document.getElementById('caphill');
+      caphillUl.appendChild(liEl);
+      this.cookiesArray.push(this.avgCookiesHour);
+    }
+  },
+  total: function () {
+    this.totalCookies = this.cookiesArray.reduce(function (a,b) {
+      return a + b;
+    }, 0);
+    var liEl = document.createElement('li');
+    liEl.textContent = 'Total ' + this.totalCookies;
+    var caphillUl = document.getElementById('caphill');
+    caphillUl.appendChild(liEl);
+  }
+};
+caphill.getAvgCustomersHour();
+caphill.getAvgCookiesHour();
+caphill.render();
+caphill.total();
+console.log('Average Customers per Hour ' + caphill.avgCustomersHour);
+console.log('Average Cookies per Hour ' + caphill.avgCookiesHour);
+console.log(caphill.cookiesArray);
+console.log(caphill.totalCookies);
 // var first = {
 //   storeName: 'First and Pike',
-//   minCustomersDay:
-//   maxCustomersDay:
+//   minCustomers:
+//   maxCustomers:
 //   avgSale:
-//   customersHour:
-//   cookiesHour:
-//   customersDay:
-//   cookiesDay:
-//
-// };
-//
-// var first = {
-//   storeName: 'First and Pike',
-//   minCustomersDay:
-//   maxCustomersDay:
-//   avgSale:
-//   customersHour:
-//   cookiesHour:
-//   customersDay:
-//   cookiesDay:
+//   avgCustomersHour:
+//   avgCookiesHourcookiesHour:
+//   cookiesArray:
+//   cookiesTotal:
 //
 // };
