@@ -1,7 +1,7 @@
 'use strict';
 
 // Array for business hours
-var days = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 // First and Pike Calculation
 var first = {
@@ -20,11 +20,11 @@ var first = {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
   },
   render: function () {
-    for (var i = 0; i < days.length; i++) {
+    for (var i = 0; i < hours.length; i++) {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
       var firstUl = document.getElementById('first');
       firstUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -35,7 +35,7 @@ var first = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
     var firstUl = document.getElementById('first');
     firstUl.appendChild(liEl);
   }
@@ -66,11 +66,11 @@ var seatac = {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
   },
   render: function () {
-    for (var i = 0; i < days.length; i++) {
+    for (var i = 0; i < hours.length; i++) {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
       var seatacUl = document.getElementById('seatac');
       seatacUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -81,7 +81,7 @@ var seatac = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
     var seatacUl = document.getElementById('seatac');
     seatacUl.appendChild(liEl);
   }
@@ -113,11 +113,11 @@ var seacenter = {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
   },
   render: function () {
-    for (var i = 0; i < days.length; i++) {
+    for (var i = 0; i < hours.length; i++) {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
       var seacenterUl = document.getElementById('seacenter');
       seacenterUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -128,7 +128,7 @@ var seacenter = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
     var seacenterUl = document.getElementById('seacenter');
     seacenterUl.appendChild(liEl);
   }
@@ -160,11 +160,11 @@ var caphill = {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
   },
   render: function () {
-    for (var i = 0; i < days.length; i++) {
+    for (var i = 0; i < hours.length; i++) {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
       var caphillUl = document.getElementById('caphill');
       caphillUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -175,7 +175,7 @@ var caphill = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
     var caphillUl = document.getElementById('caphill');
     caphillUl.appendChild(liEl);
   }
@@ -206,11 +206,11 @@ var alki = {
     this.avgCookiesHour = Math.ceil(this.avgCustomersHour * this.avgSale);
   },
   render: function () {
-    for (var i = 0; i < days.length; i++) {
+    for (var i = 0; i < hours.length; i++) {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
       var alkiUl = document.getElementById('alki');
       alkiUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -221,7 +221,7 @@ var alki = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
     var alkiUl = document.getElementById('alki');
     alkiUl.appendChild(liEl);
   }
