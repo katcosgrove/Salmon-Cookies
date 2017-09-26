@@ -21,7 +21,7 @@ var first = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
       var firstUl = document.getElementById('first');
       firstUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -32,7 +32,7 @@ var first = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
     var firstUl = document.getElementById('first');
     firstUl.appendChild(liEl);
   }
@@ -67,7 +67,7 @@ var seatac = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
       var seatacUl = document.getElementById('seatac');
       seatacUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -78,7 +78,7 @@ var seatac = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
     var seatacUl = document.getElementById('seatac');
     seatacUl.appendChild(liEl);
   }
@@ -113,7 +113,7 @@ var seacenter = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
       var seacenterUl = document.getElementById('seacenter');
       seacenterUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -124,7 +124,7 @@ var seacenter = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
     var seacenterUl = document.getElementById('seacenter');
     seacenterUl.appendChild(liEl);
   }
@@ -159,7 +159,7 @@ var caphill = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
       var caphillUl = document.getElementById('caphill');
       caphillUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -170,7 +170,7 @@ var caphill = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
     var caphillUl = document.getElementById('caphill');
     caphillUl.appendChild(liEl);
   }
@@ -204,7 +204,7 @@ var alki = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour;
+      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
       var alkiUl = document.getElementById('alki');
       alkiUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -215,7 +215,7 @@ var alki = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-    liEl.textContent = 'Total ' + this.totalCookies;
+    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
     var alkiUl = document.getElementById('alki');
     alkiUl.appendChild(liEl);
   }
