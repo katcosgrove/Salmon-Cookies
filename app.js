@@ -1,6 +1,9 @@
 'use strict';
+
+// Array for business hours
 var days = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+// First and Pike Calculation
 var first = {
   storeName: 'First and Pike',
   minCustomers: 23,
@@ -37,7 +40,6 @@ var first = {
     firstUl.appendChild(liEl);
   }
 };
-
 first.getAvgCustomersHour();
 first.getAvgCookiesHour();
 first.render();
@@ -47,6 +49,7 @@ console.log('Average Cookies per Hour ' + first.avgCookiesHour);
 console.log(first.cookiesArray);
 console.log(first.totalCookies);
 
+// Seatac Airport Calculations
 var seatac = {
   storeName: 'SeaTac Airport',
   minCustomers: 3,
@@ -93,6 +96,7 @@ console.log('Average Cookies per Hour ' + seatac.avgCookiesHour);
 console.log(seatac.cookiesArray);
 console.log(seatac.totalCookies);
 
+//Seattle Center Calculations
 var seacenter = {
   storeName: 'Seattle Center',
   minCustomers: 11,
@@ -139,6 +143,7 @@ console.log('Average Cookies per Hour ' + seacenter.avgCookiesHour);
 console.log(seacenter.cookiesArray);
 console.log(seacenter.totalCookies);
 
+//Capitol Hill Calcultions
 var caphill = {
   storeName: 'Capitol Hill',
   minCustomers: 20,
@@ -184,6 +189,7 @@ console.log('Average Cookies per Hour ' + caphill.avgCookiesHour);
 console.log(caphill.cookiesArray);
 console.log(caphill.totalCookies);
 
+//Alki Beach Calculations
 var alki = {
   storeName: 'Alki Beach',
   minCustomers: 2,
