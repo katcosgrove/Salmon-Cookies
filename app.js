@@ -24,11 +24,7 @@ var first = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-<<<<<<< HEAD
       liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
-=======
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
       var firstUl = document.getElementById('first');
       firstUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -39,11 +35,7 @@ var first = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-<<<<<<< HEAD
     liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
-=======
-    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
     var firstUl = document.getElementById('first');
     firstUl.appendChild(liEl);
   }
@@ -79,11 +71,7 @@ var seatac = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-<<<<<<< HEAD
       liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
-=======
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
       var seatacUl = document.getElementById('seatac');
       seatacUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -94,11 +82,7 @@ var seatac = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-<<<<<<< HEAD
     liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
-=======
-    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
     var seatacUl = document.getElementById('seatac');
     seatacUl.appendChild(liEl);
   }
@@ -134,11 +118,7 @@ var seacenter = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-<<<<<<< HEAD
       liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
-=======
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
       var seacenterUl = document.getElementById('seacenter');
       seacenterUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -149,11 +129,7 @@ var seacenter = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-<<<<<<< HEAD
     liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
-=======
-    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
     var seacenterUl = document.getElementById('seacenter');
     seacenterUl.appendChild(liEl);
   }
@@ -189,11 +165,7 @@ var caphill = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-<<<<<<< HEAD
       liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
-=======
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
       var caphillUl = document.getElementById('caphill');
       caphillUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -204,11 +176,7 @@ var caphill = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-<<<<<<< HEAD
     liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
-=======
-    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
     var caphillUl = document.getElementById('caphill');
     caphillUl.appendChild(liEl);
   }
@@ -244,11 +212,7 @@ var alki = {
       this.getAvgCustomersHour();
       this.getAvgCookiesHour();
       var liEl = document.createElement('li');
-<<<<<<< HEAD
       liEl.textContent = hours[i] + ' ' + this.avgCookiesHour + ' cookies sold.';
-=======
-      liEl.textContent = days[i] + ' ' + this.avgCookiesHour + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
       var alkiUl = document.getElementById('alki');
       alkiUl.appendChild(liEl);
       this.cookiesArray.push(this.avgCookiesHour);
@@ -259,11 +223,7 @@ var alki = {
       return a + b;
     }, 0);
     var liEl = document.createElement('li');
-<<<<<<< HEAD
     liEl.textContent = 'Total ' + this.totalCookies + ' cookies sold.';
-=======
-    liEl.textContent = 'Total ' + this.totalCookies + ' cookies';
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
     var alkiUl = document.getElementById('alki');
     alkiUl.appendChild(liEl);
   }
