@@ -41,14 +41,18 @@ body {
 }
 
 #footerContainer {
-  color: white;
+  color: rgb(213, 230, 232);
   background-color: rgb(0, 70, 89);
   text-align: center;
   position: relative;
-  height: 200px;
-  width: 97%;
-  margin: -18px 20px 0px 20px;
+  height: 180px;
   padding-top: 20px;
+  width: 97%;
+  margin: -25px 20px 0px 20px;
+  font-family: 'Baskerville', serif;
+}
+
+#price {
   font-family: 'Georgia', serif;
 }
 
@@ -56,10 +60,13 @@ body {
   color: black;
   background-color: white;
   text-align: center;
-  font-family: 'Helvetica', sans-serif;
   width: 97%;
   padding: 150px 0px 40px 0px;
   margin: 0px 20px;
+}
+
+.mainContainers h1,h2 {
+  font-family: 'Oswald', sans-serif;
 }
 
 .divider {
