@@ -46,7 +46,7 @@ img {
 
 #banner {
   background-image: url("images/darkwood.jpg");
-  padding: 130px 0px 40px 0px;
+  padding: 128px 0px 4px 0px;
   height: 200px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -84,12 +84,17 @@ img {
   font-family: 'Oswald', sans-serif;
 }
 
+.mainContainers p {
+  font-family: 'Helvetica', sans-serif;
+}
+
 .divider {
   text-align: center;
   width: 97%;
-  padding: 40px 0px 60px 0px;
-  margin: 35px 20px 0px 20px;
-  height: 115px;
+  padding: 36px 0px 60px 0px;
+  margin: 0px 20px 0px 20px;
+  height: 39px;
   background-color: rgb(0, 70, 89);
   color: white;
+  font-family: 'Oswald', sans-serif;
 }
