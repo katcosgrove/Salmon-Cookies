@@ -41,19 +41,25 @@ body {
 }
 
 #footerContainer {
-  padding: 120px 10px 0px 0px;
   color: white;
+  background-color: rgb(0, 70, 89);
   text-align: center;
+  position: relative;
+  height: 200px;
+  width: 97%;
+  margin: -18px 20px 0px 20px;
+  padding-top: 20px;
+  font-family: 'Georgia', serif;
 }
 
 .mainContainers {
   color: black;
   background-color: white;
-  padding: 20px 20px 20px 40px;
-}
-
-.mainContainers h2 {
   text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  width: 97%;
+  padding: 150px 0px 40px 0px;
+  margin: 0px 20px;
 }
 
 .divider {
