@@ -4,11 +4,7 @@ html, body {
 }
 
 body {
-<<<<<<< HEAD
   background-image: url("images/brightwood.jpg");
-=======
-  background-image: url("images/palewood.jpg");
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
   background-repeat: repeat-y;
 }
 
