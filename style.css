@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background-image: url("images/palewood.jpg");
+  background-image: url("images/brightwood.jpg");
   background-repeat: repeat-y;
 }
 
@@ -83,6 +83,7 @@ a {
   width: 97%;
   padding: 20px 0px 40px 0px;
   margin: 0px 20px;
+  border: grey solid 1px;
 }
 
 .mainContainers h1,h2 {
