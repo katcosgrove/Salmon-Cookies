@@ -40,6 +40,7 @@ var first = {
     firstUl.appendChild(liEl);
   }
 };
+
 first.getAvgCustomersHour();
 first.getAvgCookiesHour();
 first.render();
@@ -180,6 +181,7 @@ var caphill = {
     caphillUl.appendChild(liEl);
   }
 };
+
 caphill.getAvgCustomersHour();
 caphill.getAvgCookiesHour();
 caphill.render();
@@ -227,6 +229,7 @@ var alki = {
   }
 
 };
+
 alki.getAvgCustomersHour();
 alki.getAvgCookiesHour();
 alki.render();
