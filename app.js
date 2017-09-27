@@ -79,6 +79,22 @@ function addNewStore(event) {
 storeForm.addEventListener('submit',addNewStore);
 
 //These render the table, its headers, and its content
+function renderHeaders() {
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Location';
+  trEl.appendChild(thEl);
+  for (var i = 0; i < hours.length; i++) {
+    thEl = document.createElement('th');
+    thEl.textContent = hours[i];
+    trEl.appendChild(thEl);
+  };
+  thEl = document.createElement('th');
+  thEl.textContent = 'Total';
+  trEl.appendChild(thEl);
+  locationTable.appendChild(trEl);
+}
+
 CookieStore.prototype.render = function () {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
@@ -99,27 +115,10 @@ CookieStore.prototype.render = function () {
 
 function renderAll() {
   locationSales.innerHTML = ' ';
+  renderHeaders();
   for (var i in allLocations) {
     allLocations[i].render();
   }
 };
-function renderHeaders() {
-  var trEl = document.createElement('tr');
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Location';
-  trEl.appendChild(thEl);
-  for (var i = 0; i < hours.length; i++) {
-    thEl = document.createElement('th');
-    thEl.textContent = hours[i];
-    trEl.appendChild(thEl);
-  };
-  thEl = document.createElement('th');
-  thEl.textContent = 'Total';
-  trEl.appendChild(thEl);
-  locationTable.appendChild(trEl);
-}
 
-renderHeaders();
 renderAll();
-
-console.log(allLocations);
