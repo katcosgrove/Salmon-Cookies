@@ -83,18 +83,35 @@ a {
   width: 97%;
   padding: 20px 0px 40px 0px;
   margin: 0px 20px;
-<<<<<<< HEAD
   border: grey solid 1px;
-=======
->>>>>>> 4fb074186ee618c88702a202f876e6eb17f6d069
 }
 
-.mainContainers h1,h2 {
+.mainContainers h1,h2,h3 {
   font-family: 'Oswald', sans-serif;
 }
 
 .mainContainers p {
   font-family: 'Helvetica', sans-serif;
+}
+
+.mainContainers table,th,td {
+  font-family: 'Helvetica', sans-serif;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.mainContainers th,td {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  padding: 10px;
+}
+
+.mainContainers th {
+  background-color: rgb(0, 156, 191);
+  color: white;
+}
+
+.mainContainers tr:hover {
+  background-color: rgb(219, 242, 255)
 }
 
 .divider {
