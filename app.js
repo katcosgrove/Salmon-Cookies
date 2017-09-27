@@ -6,6 +6,7 @@ var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 // Variable storing array of location objects + variable for table
 var allLocations = [];
 var locationTable = document.getElementById('locationSales');
+var storeForm = document.getElementById('store-form');
 
 // Constructor function for stores
 function CookieStore(location, minCustomers, maxCustomers, avgSale) {
@@ -49,6 +50,34 @@ new CookieStore('Seattle Center',11, 38, 3.7);
 new CookieStore('Capitol Hill', 20, 38, 2.3);
 new CookieStore('Alki', 2, 16, 4.6);
 
+
+//Event Handler
+function addNewStore(event) {
+
+  console.log('log of the event.target.who.value', event.target.minCustomers.value);
+
+  event.preventDefault();
+  if (!event.target.name.value || !event.target.minCustomers.value || !event.target.maxCustomers || !event.target.avgSale) {
+    return alert('Oops, you forgot something! Please check your entries and try again.');
+  }
+
+  var newStoreName = event.target.name.value;
+  var addMinCustomers = parseInt(event.target.minCustomers.value);
+  var addMaxCustomers = parseInt(event.target.maxCustomers.value);
+  var addAvgSale = parseInt(event.target.avgSale.value);
+
+  event.target.name.value = null;
+  event.target.minCustomers.value = null;
+  event.target.maxCustomers.value = null;
+  event.target.avgSale.value = null;
+  new CookieStore(newStoreName,addMinCustomers,addMaxCustomers,addAvgSale);
+
+  renderAll();
+}
+
+//Event Listener
+storeForm.addEventListener('submit',addNewStore);
+
 //These render the table, its headers, and its content
 CookieStore.prototype.render = function () {
   var trEl = document.createElement('tr');
@@ -69,11 +98,11 @@ CookieStore.prototype.render = function () {
 };
 
 function renderAll() {
+  locationSales.innerHTML = ' ';
   for (var i in allLocations) {
     allLocations[i].render();
   }
 };
-
 function renderHeaders() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
@@ -92,3 +121,5 @@ function renderHeaders() {
 
 renderHeaders();
 renderAll();
+
+console.log(allLocations);

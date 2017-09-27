@@ -76,6 +76,22 @@ a {
   font-family: 'Georgia', serif;
 }
 
+#form {
+  color: black;
+  background-color: white;
+  text-align: center;
+  width: 97%;
+  margin: 0px 20px;
+  font-family: 'Oswald', sans-serif;
+  border: 0;
+  box-shadow: 0;
+}
+
+#form fieldset {
+  border: 0;
+  box-shadow: 0;
+}
+
 .mainContainers {
   color: black;
   background-color: white;
