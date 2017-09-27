@@ -66,8 +66,7 @@ a {
   text-align: center;
   position: relative;
   height: 180px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 10px 1px 20px 2px;
   width: 97%;
   margin: -25px 20px 0px 20px;
   font-family: 'Baskerville', serif;
