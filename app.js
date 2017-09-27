@@ -35,11 +35,7 @@ function CookieStore(location, minCustomers, maxCustomers, avgSale) {
       return a + b;
     }, 0);
   };
-  this.getHourlyTotal = function(){
-    this.hourlyTotal = this.hourlySalesArray.map(function (a,b) {
-      return a + b;
-    }, 0);
-  };
+
   this.getAvgCustomersHour();
   this.getAvgCookiesHour();
   this.getTotalSold();
