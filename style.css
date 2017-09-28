@@ -17,6 +17,90 @@ a {
   color: inherit;
 }
 
+h1,h2,h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  font-family: 'Helvetica', sans-serif;
+}
+
+fieldset {
+  border: 0;
+  box-shadow: 0;
+}
+
+nav li {
+  display: inline-block;
+  float: right;
+  padding: 15px 20px 0px 10px;
+  height: 35px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+}
+
+nav li:hover {
+  color: rgb(0, 70, 89);
+}
+
+nav h1 {
+  float: left;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-size: 46px;
+  margin: 10px 20px 20px 10px;
+}
+
+main {
+color: black;
+background-color: white;
+text-align: center;
+width: 97%;
+padding: 20px 0px 40px 0px;
+margin: 0px 20px;
+border: grey solid 1px;
+}
+
+main table,th,td {
+  font-family: 'Helvetica', sans-serif;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+main th,td {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  padding: 10px;
+}
+
+main th {
+  background-color: rgb(0, 156, 191);
+  color: white;
+}
+
+main tr:hover {
+  background-color: rgb(219, 242, 255)
+}
+
+form {
+  color: black;
+  background-color: white;
+  text-align: center;
+  width: 97%;
+  margin: 0px 20px;
+  font-family: 'Oswald', sans-serif;
+  border: 0;
+  box-shadow: 0;
+}
+
+footer {
+  color: rgb(213, 230, 232);
+  background-color: rgb(0, 70, 89);
+  padding: 10px 1px 20px 2px;
+  width: 97%;
+  margin: -25px 20px 0px 20px;
+  font-family: 'Baskerville', serif;
+}
+
 #topBar {
   background-color: rgb(0, 156, 191);
   color: white;
@@ -27,107 +111,21 @@ a {
   height: 100px;
 }
 
-#topBar #topNav li {
-  display: inline-block;
-  float: right;
-  padding: 15px 20px 0px 10px;
-  height: 35px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 22px;
-}
-
-#topBar #topNav li:hover {
-  color: rgb(0, 70, 89);
-}
-
-#headerName {
-  float: left;
-  text-align: left;
-  font-family: 'Oswald', sans-serif;
-  font-size: 48px;
-  width: 40%;
-  margin: 10px 20px 20px 10px;
-}
-
 #banner {
   background-image: url("images/darkwood.jpg");
   padding: 128px 0px 4px 0px;
   height: 200px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  width: 97%;
+  margin: 0px 20px 0px 20px;
 }
 
 #banner img {
   padding-left: 25%;
 }
 
-#footerContainer {
-  color: rgb(213, 230, 232);
-  background-color: rgb(0, 70, 89);
-  text-align: center;
-  position: relative;
-  height: 180px;
-  padding: 10px 1px 20px 2px;
-  width: 97%;
-  margin: -25px 20px 0px 20px;
-  font-family: 'Baskerville', serif;
-}
-
 #price {
   font-family: 'Georgia', serif;
-}
-
-#form {
-  color: black;
-  background-color: white;
-  text-align: center;
-  width: 97%;
-  margin: 0px 20px;
-  font-family: 'Oswald', sans-serif;
-  border: 0;
-  box-shadow: 0;
-}
-
-#form fieldset {
-  border: 0;
-  box-shadow: 0;
-}
-
-.mainContainers {
-  color: black;
-  background-color: white;
-  text-align: center;
-  width: 97%;
-  padding: 20px 0px 40px 0px;
-  margin: 0px 20px;
-  border: grey solid 1px;
-}
-
-.mainContainers h1,h2,h3 {
-  font-family: 'Oswald', sans-serif;
-}
-
-.mainContainers p {
-  font-family: 'Helvetica', sans-serif;
-}
-
-.mainContainers table,th,td {
-  font-family: 'Helvetica', sans-serif;
-  text-align: left;
-  border-collapse: collapse;
-}
-
-.mainContainers th,td {
-  border-bottom: 1px solid rgb(234, 234, 234);
-  padding: 10px;
-}
-
-.mainContainers th {
-  background-color: rgb(0, 156, 191);
-  color: white;
-}
-
-.mainContainers tr:hover {
-  background-color: rgb(219, 242, 255)
 }
 
 .divider {

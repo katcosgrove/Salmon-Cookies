@@ -57,8 +57,16 @@ function addNewStore(event) {
   console.log('log of the event.target.who.value', event.target.minCustomers.value);
 
   event.preventDefault();
-  if (!event.target.name.value || !event.target.minCustomers.value || !event.target.maxCustomers || !event.target.avgSale) {
+  if (!newStoreName || !addMinCustomers || !addMaxCustomers || !addAvgSale) {
     return alert('Oops, you forgot something! Please check your entries and try again.');
+  }
+
+  if(addMinCustomers < 0 || addMaxCustomers < 0 || addAvgSale) {
+    return alert ('How are you putting negative values in here? Quit it, you\re not giving away customers and cookies.');
+  }
+
+  if (addMinCustomers > addMaxCustomers) {
+    return alert('That\'s not how numbers work, nerd.');
   }
 
   var newStoreName = event.target.name.value;
