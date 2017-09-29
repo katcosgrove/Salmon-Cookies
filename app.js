@@ -74,6 +74,22 @@ function addNewStore(event) {
   var addMaxCustomers = parseInt(event.target.maxCustomers.value);
   var addAvgSale = parseInt(event.target.avgSale.value);
 
+  for (var i = 0; i < allLocations.length; i++){
+    if (loc === allLocations[i].location) {
+      minCustomers = addMinCustomers;
+      maxCustomers = addMaxCustomers;
+      avgSale = addAvgSale;
+
+      event.target.name.value = null;
+      event.target.minCustomers.value = null;
+      event.target.maxCustomers.value = null;
+      event.target.avgSale.value = null;
+
+      renderAll();
+      return;
+    }
+  }
+
   event.target.name.value = null;
   event.target.minCustomers.value = null;
   event.target.maxCustomers.value = null;
