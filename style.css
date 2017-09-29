@@ -128,7 +128,9 @@ footer div {
 }
 
 #banner img {
-  padding-left: 25%;
+  height: 300px;
+  width: 340px;
+  padding-left: 39%;
 }
 
 #price {
