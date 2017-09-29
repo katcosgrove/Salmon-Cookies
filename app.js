@@ -50,58 +50,6 @@ new CookieStore('Seattle Center',11, 38, 3.7);
 new CookieStore('Capitol Hill', 20, 38, 2.3);
 new CookieStore('Alki', 2, 16, 4.6);
 
-
-//Event Handler
-function addNewStore(event) {
-
-  console.log('log of the event.target.who.value', event.target.minCustomers.value);
-
-  event.preventDefault();
-  if (!newStoreName || !addMinCustomers || !addMaxCustomers || !addAvgSale) {
-    return alert('Oops, you forgot something! Please check your entries and try again.');
-  }
-
-  if(addMinCustomers < 0 || addMaxCustomers < 0 || addAvgSale) {
-    return alert ('How are you putting negative values in here? Quit it, you\re not giving away customers and cookies.');
-  }
-
-  if (addMinCustomers > addMaxCustomers) {
-    return alert('That\'s not how numbers work, nerd.');
-  }
-
-  var newStoreName = event.target.name.value;
-  var addMinCustomers = parseInt(event.target.minCustomers.value);
-  var addMaxCustomers = parseInt(event.target.maxCustomers.value);
-  var addAvgSale = parseInt(event.target.avgSale.value);
-
-  for (var i = 0; i < allLocations.length; i++){
-    if (loc === allLocations[i].location) {
-      minCustomers = addMinCustomers;
-      maxCustomers = addMaxCustomers;
-      avgSale = addAvgSale;
-
-      event.target.name.value = null;
-      event.target.minCustomers.value = null;
-      event.target.maxCustomers.value = null;
-      event.target.avgSale.value = null;
-
-      renderAll();
-      return;
-    }
-  }
-
-  event.target.name.value = null;
-  event.target.minCustomers.value = null;
-  event.target.maxCustomers.value = null;
-  event.target.avgSale.value = null;
-  new CookieStore(newStoreName,addMinCustomers,addMaxCustomers,addAvgSale);
-
-  renderAll();
-}
-
-//Event Listener
-storeForm.addEventListener('submit',addNewStore);
-
 //These render the table, its headers, and its content
 function renderHeaders() {
   var trEl = document.createElement('tr');
@@ -145,4 +93,55 @@ function renderAll() {
   }
 };
 
+//Event Handler
+function addNewStore(event) {
+  event.preventDefault();
+
+  if (!event.target.name.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgSale.value) {
+    return alert('Oops, you forgot something! Please check your entries and try again.');
+  }
+
+  if(addMinCustomers < 0 || addMaxCustomers < 0 || addAvgSale) {
+    return alert ('How are you putting negative values in here? Quit it, you\re not giving away customers and cookies.');
+  }
+
+  if (addMinCustomers > addMaxCustomers) {
+    return alert('That\'s not how numbers work, nerd.');
+  }
+
+  var newStoreName = event.target.name.value;
+  var addMinCustomers = parseInt(event.target.minCustomers.value);
+  var addMaxCustomers = parseInt(event.target.maxCustomers.value);
+  var addAvgSale = parseInt(event.target.avgSale.value);
+
+  // This code block isn't running -- still working on it. The fields get updated in the allLocations array, I just can't get the table to update.
+  // for (var i = 0; i < allLocations.length; i++){
+  //   if (newStoreName === allLocations[i].location) {
+  //     allLocations[i].minCustomers = addMinCustomers;
+  //     allLocations[i].maxCustomers = addMaxCustomers;
+  //     allLocations[i].avgSale = addAvgSale;
+  //
+  //     event.target.name.value = null;
+  //     event.target.minCustomers.value = null;
+  //     event.target.maxCustomers.value = null;
+  //     event.target.avgSale.value = null;
+  //     renderAll();
+  //     return;
+  //   }
+  // }
+
+  event.target.name.value = null;
+  event.target.minCustomers.value = null;
+  event.target.maxCustomers.value = null;
+  event.target.avgSale.value = null;
+  new CookieStore(newStoreName,addMinCustomers,addMaxCustomers,addAvgSale);
+
+  renderAll();
+}
+
+//Event Listener
+storeForm.addEventListener('submit',addNewStore);
+
 renderAll();
+
+console.log(allLocations);
