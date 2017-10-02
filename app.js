@@ -115,23 +115,27 @@ function addNewStore(event) {
     return alert('That\'s not how numbers work, nerd.');
   }
 
-  // This code block isn't running -- still working on it. The fields get updated in the allLocations array, I just can't get the table to update.
+  // This code block isn't running -- still working on it. The fields get updated in the allLocations array, I just can't get the table to update correctly.
   for (var i = 0; i < allLocations.length; i++){
     if (newStoreName == allLocations[i].location) {
       allLocations[i].minCustomers = addMinCustomers;
       allLocations[i].maxCustomers = addMaxCustomers;
       allLocations[i].avgSale = addAvgSale;
+      renderAll();
+      return;
     } else {
+      event.target.name.value = null;
+      event.target.minCustomers.value = null;
+      event.target.maxCustomers.value = null;
+      event.target.avgSale.value = null;
       new CookieStore(newStoreName,addMinCustomers,addMaxCustomers,addAvgSale);
-      break;
+      renderAll();
+      return;
     }
-  };
-  event.target.name.value = null;
-  event.target.minCustomers.value = null;
-  event.target.maxCustomers.value = null;
-  event.target.avgSale.value = null;
-  renderAll();
+  }
 }
+    // new CookieStore(newStoreName,addMinCustomers,addMaxCustomers,addAvgSale);
+    // renderAll();
 
 //Event Listener
 storeForm.addEventListener('submit',addNewStore);
